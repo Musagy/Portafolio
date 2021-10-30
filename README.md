@@ -1,34 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hola!!
+## Bienvenido a la documentacion de mi portafolio
 
-## Getting Started
+Acá planeo poner todo el camido que tuve al construirlo
+y seguro veras muchas faltas ortograficas, pero bueno.
+Ahí voy.
 
-First, run the development server:
+# 1er commit - Configuracion inicial
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+3 intentos para configurarlas bien xD.
+Pero bueno creo que ya quedo, voy a crear un commit con las dependencias principales que creo que tendre en este proyecto, el cual para mi es el mas grande hasta el momento para mi.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+En este proyecto estare usando el framework tailwind ya que creo que es muy bueno.
+Configurare tailwind.config.js con los colores determinados para mi marca personal.
