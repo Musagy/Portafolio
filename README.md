@@ -12,3 +12,9 @@ Pero bueno creo que ya quedo, voy a crear un commit con las dependencias princip
 
 En este proyecto estare usando el framework tailwind ya que creo que es muy bueno.
 Configurare tailwind.config.js con los colores determinados para mi marca personal.
+
+# 2do commit - Creacion de Nav e implementacion de Dark Mode
+
+Una pesadilla lograr hacer que funcione buen el toggle del dark mode, pero a parte de eso todo facil.
+
+A parte de eso agregue las otras paginas del website

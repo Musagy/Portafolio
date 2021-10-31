@@ -14,7 +14,11 @@ module.exports = {
       coolGray: colors.coolGray,
       white: colors.white
     },
-    extend: {},
+    extend: {
+      transitionProperty: {
+        "top": "top",
+      },
+    },
   },
   variants: {
     extend: {},
