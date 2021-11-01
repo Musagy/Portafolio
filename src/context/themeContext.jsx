@@ -42,7 +42,7 @@ export const ThemeProvider = ({
   }
 
   useEffect(
-    _ => {
+    () => {
       rawSetTheme(theme)
     },
     [theme]

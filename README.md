@@ -18,3 +18,11 @@ Configurare tailwind.config.js con los colores determinados para mi marca person
 Una pesadilla lograr hacer que funcione buen el toggle del dark mode, pero a parte de eso todo facil.
 
 A parte de eso agregue las otras paginas del website
+
+# 3er commit - Correccion del nav y creacion del nav button responsive
+
+El boton del dark mode tenia un bug asi que opte por arreglarlo.
+
+A parte de eso cree el boton responsive con una animacion elaborada desde cero.
+
+Y por ultimo una pequena implementacion para los layouts de cada pagina
