@@ -26,3 +26,9 @@ El boton del dark mode tenia un bug asi que opte por arreglarlo.
 A parte de eso cree el boton responsive con una animacion elaborada desde cero.
 
 Y por ultimo una pequena implementacion para los layouts de cada pagina
+
+# 4to commit - Finalizacion del nav y comienzo de estructuracion de layout
+
+Al fin, ya cree el navbar que queria, quizas le encuentre algunos errores mas adelante, pero en si esta todo correcto, con funciones como poder tintar un item dependiendo de la pagina de donde estes, obviamente todo responsive.
+
+por otra parte, cuando estaba trabajando con las rutas, toque un poco lo que seria los layout del proyecto, y ya estoy comenzando a estructurar el Home

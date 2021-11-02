@@ -17,11 +17,14 @@ module.exports = {
     extend: {
       transitionProperty: {
         "top": "top",
+        'spacing': 'margin, padding',
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+     transitionProperty: ['hover', 'focus'],
+    },
   },
   plugins: [],
 }
