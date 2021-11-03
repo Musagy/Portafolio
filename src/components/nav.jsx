@@ -40,7 +40,7 @@ const Nav = () => {
     stkAnm1 = "transform scale-125 translate-y-2 rotate-45"
     stkAnm2 = "transform scale-125 rotate-45"
     stkAnm3 = "transform scale-125 -translate-y-2 -rotate-45"
-    navRpsv= "flex flex-col right-0 top-16 items-start bg-white drop-shadow-lg pb-2 rounded-2xl rounded-tr-md bg-blueGray-700 text-white"
+    navRpsv= "flex flex-col right-0 top-16 items-start  drop-shadow-lg pb-2 rounded-2xl rounded-tr-md bg-blueGray-700 text-white"
     itemRpsv = " px-4 py-1 block w-full duration-150"
     itInicio = "pt-3 rounded-tr-md rounded-tl-2xl"
   }

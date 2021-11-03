@@ -31,4 +31,7 @@ Y por ultimo una pequena implementacion para los layouts de cada pagina
 
 Al fin, ya cree el navbar que queria, quizas le encuentre algunos errores mas adelante, pero en si esta todo correcto, con funciones como poder tintar un item dependiendo de la pagina de donde estes, obviamente todo responsive.
 
-por otra parte, cuando estaba trabajando con las rutas, toque un poco lo que seria los layout del proyecto, y ya estoy comenzando a estructurar el Home
+por otra parte, cuando estaba trabajando con las rutas, toque un poco lo que seria los layout del proyecto, y ya estoy comenzando a estructurar el Home.
+
+# 5to commit - Finalizacion del Home.
+Hoy he hecho muchas cosas. Complete el Home y le di Responsive design, a parte de eso ya estuve jugando con el head dandole titulos dinamicos y un favicon para la pagina. comparado con los anteriores dias esto fue rapido.

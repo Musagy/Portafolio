@@ -29,7 +29,7 @@ a {
   max-width: 64rem;
   padding: 0px 1rem;
   margin: 0px auto;
-  grid-template-rows: 5rem 1fr 3rem;
+  grid-template-rows: 5rem 1fr 5rem;
 }
 
 /* .{

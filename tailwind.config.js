@@ -8,6 +8,12 @@ module.exports = {
   ],
   darkMode: "class", // or 'media' or 'class'
   theme: {
+    fill: {
+      current: 'currentColor',
+    },
+    fill: theme => ({
+      'blueGray': theme('colors.blueGray.700'),
+    }),
     colors: {
       teal: colors.teal,
       blueGray: colors.blueGray,
