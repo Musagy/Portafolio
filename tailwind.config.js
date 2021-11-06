@@ -30,6 +30,7 @@ module.exports = {
   variants: {
     extend: {
      transitionProperty: ['hover', 'focus'],
+     scale: ['active', 'group-hover'],
     },
   },
   plugins: [],

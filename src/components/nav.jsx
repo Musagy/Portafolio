@@ -62,7 +62,7 @@ const Nav = () => {
     <nav className="
       flex max-w-5xl relative
       justify-between items-center
-      my-4 righ
+      my-4 z-20
       "
     >
       <div 

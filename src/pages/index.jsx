@@ -1,8 +1,4 @@
 import {
-  AiFillCaretRight, 
-  AiFillCaretLeft, 
-} from 'react-icons/ai'
-import {
   SiTailwindcss,
   SiNextdotjs,
   SiReact,
@@ -15,7 +11,6 @@ import {
 import Layout from '../components/layout'
 import Link from 'next/link'
 import Image from 'next/image'
-import skills from 'public/skills.svg'
 
 const Home = () => {
   let skillsSvg = "sm:h-8 sm:w-8 h-7 w-7 fill-current text-blueGray-700 dark:text-white"

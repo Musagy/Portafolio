@@ -35,3 +35,8 @@ por otra parte, cuando estaba trabajando con las rutas, toque un poco lo que ser
 
 # 5to commit - Finalizacion del Home.
 Hoy he hecho muchas cosas. Complete el Home y le di Responsive design, a parte de eso ya estuve jugando con el head dandole titulos dinamicos y un favicon para la pagina. comparado con los anteriores dias esto fue rapido.
+
+# 6to commit - Creacion de la estructura del portafolio
+Han pasado dias desde que no escribo algo aqui, pero bueno.
+finalice la estructura del portafolio, tambien cree un scroll bar customizado.
+ahora solo falta la base de datos para que se pueda ver completa, pero tambien falta la coneccion de datos con un backend, pero eso es problema de otro dia

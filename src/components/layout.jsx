@@ -4,7 +4,7 @@ import Nav from '../components/nav'
 
 const Layout = ({children}) => {
   const { asPath, query } = useRouter()
-  let layoutClassDefault = "min-h-screen w-full overflow-x-hidden text-white transition-all"
+  let layoutClassDefault = "min-h-screen max-w-5xl w-full grid px-4 mx-auto my-0 overflow-x-hidden text-white transition-all"
   let layoutSelect, titleSelect
   if( asPath ===  "/"){
     layoutSelect = "inicio"
