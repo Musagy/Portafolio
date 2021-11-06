@@ -40,3 +40,7 @@ Hoy he hecho muchas cosas. Complete el Home y le di Responsive design, a parte d
 Han pasado dias desde que no escribo algo aqui, pero bueno.
 finalice la estructura del portafolio, tambien cree un scroll bar customizado.
 ahora solo falta la base de datos para que se pueda ver completa, pero tambien falta la coneccion de datos con un backend, pero eso es problema de otro dia
+
+# 7to commit - Renombramiento de la pagina "Habilidades" a "Sobre mi"
+Un commit de pequeño cambios, tanto a una optimizacion de los layouts y los routers.
+Y por ultimo el renombramiento de la pagina "Habilidades" a "Sobre mi", esto por que creo que es lo mas adecuado ya que no solo no me voy a sentrar en mis habilidades si no cosas de mi en si

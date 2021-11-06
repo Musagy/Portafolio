@@ -40,7 +40,7 @@ const Nav = () => {
     stkAnm1 = "transform scale-125 translate-y-2 rotate-45"
     stkAnm2 = "transform scale-125 rotate-45"
     stkAnm3 = "transform scale-125 -translate-y-2 -rotate-45"
-    navRpsv= "flex flex-col right-0 top-16 items-start  drop-shadow-lg pb-2 rounded-2xl rounded-tr-md bg-blueGray-700 text-white"
+    navRpsv= "flex flex-col right-0 top-16 items-start  drop-shadow-lg pb-2 rounded-2xl rounded-tr-md bg-blueGray-700 text-white w-52 md:w-auto"
     itemRpsv = " px-4 py-1 block w-full duration-150"
     itInicio = "pt-3 rounded-tr-md rounded-tl-2xl"
   }
@@ -52,7 +52,7 @@ const Nav = () => {
     itInicio = `${itInicio} ${pageSelect}`
   } else if ( asPath.includes("/portafolio")) {
     itPortafolio = pageSelect
-  } else if ( asPath.includes("/habilidades")) {
+  } else if ( asPath.includes("/sobre-mi")) {
     itHabilidades = pageSelect
   } else if ( asPath.includes("/contactos")) {
     itContactos = pageSelect
@@ -94,10 +94,8 @@ const Nav = () => {
       </button>
 
       <div className={`
-
         md:flex md:static md:gap-5 md:items-center md:flex-row md:bg-opacity-0
       md:text-blueGray-700 md:text-xl font-medium  md:rounded-none md:drop-shadow-none 
-
 
       dark:text-white
         text-3xl
@@ -120,8 +118,8 @@ const Nav = () => {
         <Link href="/portafolio">
           <a className={`${itemRpsv} ${navDskt} ${itPortafolio}`}>Portafolio</a>
         </Link>
-        <Link href="/habilidades">
-          <a className={`${itemRpsv} ${navDskt} ${itHabilidades}`}>Habilidades</a>
+        <Link href="/sobre-mi">
+          <a className={`${itemRpsv} ${navDskt} ${itHabilidades}`}>Sobre mi</a>
         </Link>
         <Link href="/contactos">
           <a className={`${itemRpsv} ${navDskt} ${itContactos}`}>Contactos</a>
@@ -134,7 +132,7 @@ const Nav = () => {
           md:scale-100 md:left-0 md:m-0
           dark:bg-white
           
-          scale-150 left-28 mb-2 mt-3 mx-1
+          scale-150 left-32 mb-2 mt-3 mx-1
           "
         >
           <div className="

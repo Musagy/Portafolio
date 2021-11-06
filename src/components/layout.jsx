@@ -15,9 +15,9 @@ const Layout = ({children}) => {
   } else if (
     asPath.includes("portafolio") ||
     asPath.includes("contactos") ||
-    asPath.includes("habilidades")) {
-    layoutSelect = asPath.slice(1)
-    titleSelect = layoutSelect.charAt(0).toUpperCase() + layoutSelect.slice(1)
+    asPath.includes("sobre-mi")) {
+    layoutSelect = "sub-page"
+    titleSelect = (asPath.slice(1).charAt(0).toUpperCase() + asPath.slice(1).slice(1)).replace("-", " ")
   } else {
     layoutSelect = "error"
     titleSelect = "Pagina no encontrada"
@@ -31,7 +31,7 @@ const Layout = ({children}) => {
         </title>
       </Head>
 
-      <div className="dark:bg-coolGray-800 transition-all">
+      <div className="dark:bg-coolGray-800 transition-colors">
         <div className={`${layoutClassDefault} ${layoutSelect}`}>
           {
             layoutSelect === "error"
