@@ -47,3 +47,6 @@ Y por ultimo el renombramiento de la pagina "Habilidades" a "Sobre mi", esto por
 
 # 8to commit - Finalizacion de la pagina "Sobre mi"
 Despues de unos dias y aprender a usar Firebase, comecte mi base de datos de Firebase para renderizar las skills y cree el banner de presentacion del Sobre mi.
+
+# 9to commit - Responsive y loading de "Sobre mi"
+Elabore una version responsive para el sobre mi que no se vea mal, aparte de eso busque una forma de poder detectar el momento que la base de datos estuviera lista.

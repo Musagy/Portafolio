@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import SkillsList from '../components/skillsList'
+import Loading from '../components/loading'
 
 import Layout from '../components/layout'
 import lostImage from 'public/lost-image.png'
@@ -18,18 +19,15 @@ const Habilidades = () => {
   const db = getFirestore(fbApp)
   const [skillsDesign, setSkillsDesign] = useState([])
   const [skillsFrondEnd, setSkillsFrondEnd] = useState([])
-  // const a = collection(db, 'skillsDesign')
+
   useEffect(() => {
     const cltnSD = query(collection(db, 'skillsDesign'), orderBy("index", "asc"))
     onSnapshot(cltnSD, (snapshot) => {
       const listSD = []
       snapshot.forEach((doc) => {
         listSD.push(doc.data())
-        // console.log(doc.data())
       })
-      // console.log(listSnap)
       setSkillsDesign(listSD)
-      console.log(skillsDesign)
     })
 
     const cltnSFE = query(collection(db, 'skillsFrondEnd'), orderBy("index", "asc"))
@@ -37,31 +35,33 @@ const Habilidades = () => {
       const listSFE = []
       snapshot.forEach((doc) => {
         listSFE.push(doc.data())
-        // console.log(doc.data())
       })
-      // console.log(listSnap)
       setSkillsFrondEnd(listSFE)
-      console.log(skillsFrondEnd)
     })
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   return (
     <Layout>
       <div className="
-        h-80 
+        md:h-80 sm:h-80 h-96
       ">
         <div className="absolute
         bg-coolGray-300 dark:bg-blueGray-700
-          w-full h-80 left-0 top-20
+          w-full
+          md:h-80 sm:h-80 h-96
+          left-0 top-20
           transition-colors"
         />
         <div className="
-          flex flex-row-reverse relative h-full
-          items-center justify-center
+          flex md:flex-row-reverse flex-col relative h-full
+          m-4 md:m-0
+          items-center md:justify-center justify-around
         ">
-          <div className="rounded-full overflow-hidden h-56">
+          <div className="rounded-full overflow-hidden 
+          md:h-56 h-40
+          w-40 md:w-auto 
+          ">
             <Image
               src={lostImage}
               width={224}
@@ -70,7 +70,7 @@ const Habilidades = () => {
               alt="fotografia"
             />
           </div>
-          <div className="w-80 mr-28 z-10">
+          <div className="md:w-80 md:mr-28 z-10">
             <p className="z-10 font-light">
               Hola, me llamo Diego Eduardo Musagy Casas. <br />
               Soy una persona a la que le gusta aprender cosas nuevas y tener habilidad para ello. Aparte de eso soy alguien con pasión por el diseño minimalista.
@@ -78,7 +78,7 @@ const Habilidades = () => {
           </div>
           <div className="relative">
             <p className="
-            absolute text-teal-500 text-giga -top-44 -left-14 opacity-60
+            absolute text-teal-500 text-giga md:-top-44 md:-left-14 md:opacity-60 opacity-0
             ">&ldquo;</p>
           </div>
         </div>
@@ -88,8 +88,14 @@ const Habilidades = () => {
           <div className="h-14 w-2.5 bg-teal-500" />
           <h1 className="text-4xl font-bold text-teal-500">Mis herramientas son:</h1>
         </div>
-        <SkillsList json={skillsDesign} nameList={"Diseño"}/>
-        <SkillsList json={skillsFrondEnd} nameList={"Desarrollo web"}/>
+        { skillsDesign.length !== 0 && skillsFrondEnd.length !== 0 ?
+          <>
+            <SkillsList json={skillsDesign} nameList={"Diseño"}/>
+            <SkillsList json={skillsFrondEnd} nameList={"Desarrollo web"}/>
+          </>
+          :
+          <Loading/>
+        }
     </Layout>
   )
 }

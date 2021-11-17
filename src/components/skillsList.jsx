@@ -18,11 +18,9 @@ const SkillsList = ({json, nameList}) => {
         {nameList}
       </h2>
       <div className="
-        grid grid-cols-2 gap-10
+        grid md:grid-cols-2 gap-10
         max-w-3xl w-full mx-auto
       ">
-
-        {/* renderizado de tarjetas */}
         {
           json.map(skill =>{
             return(
