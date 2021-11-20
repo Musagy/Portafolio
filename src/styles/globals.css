@@ -214,3 +214,36 @@ a {
     width:100%;
   }
 }
+
+/* posts pulse ani */
+
+.pulse-ani{
+  animation-name: pulse-display;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+@keyframes pulse-display {
+  0%{
+    @apply bg-blueGray-900;
+  } 100% {
+    @apply bg-blueGray-800;
+  }
+}
+/* ::-webkit-resizer {
+  background-image: url(../public/textarea.svg);
+  background-size: 16px;
+  background-repeat: no-repeat;
+}
+::-webkit-resizer:hover{
+  background-image: url(../public/textarea-hover.svg);
+  background-size: 16px;
+  background-repeat: no-repeat;
+} */
+
+/* .message-container ::-webkit-scrollbar-track{
+  @apply dark:bg-coolGray-900 bg-white
+}
+.message-container ::-webkit-scrollbar-thumb{
+  @apply  dark:border-coolGray-900 border-white border-solid} */

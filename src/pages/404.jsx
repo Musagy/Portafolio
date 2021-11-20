@@ -1,5 +1,4 @@
 import Layout from '../components/layout'
-
 const Page404 = () => {
   return (
     <Layout>

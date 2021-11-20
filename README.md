@@ -50,3 +50,8 @@ Despues de unos dias y aprender a usar Firebase, comecte mi base de datos de Fir
 
 # 9to commit - Responsive y loading de "Sobre mi"
 Elabore una version responsive para el sobre mi que no se vea mal, aparte de eso busque una forma de poder detectar el momento que la base de datos estuviera lista.
+
+# 10mo commit - Finalizacion de "Contactos"
+Las cosas por las que he pasado no son normales xD, bueno este es un commit muy grande en el cual no tan solo estara la pagina formulario sino tambien va a estar conectado a una colleccion especial en mi base de datos para recibir los correos, y con esto tuve que crea un modo dios para mi web ya que mi unica forma de que me contacten es esta porque para emviar email necesito un dominio.
+Así que cree un sistema de autentificacion de un solo usuario el cual seria yo.
+Y bueno he aprendido mucho durante este commit y falta ya que en el siguiente commit estructurare los mensajes del modo dios para con la libreria momentJS.

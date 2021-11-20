@@ -13,9 +13,10 @@ const Layout = ({children}) => {
     layoutSelect = "article"
     titleSelect = `Articulo ${query.id}`
   } else if (
-    asPath.includes("portafolio") ||
-    asPath.includes("contactos") ||
-    asPath.includes("sobre-mi")) {
+    asPath === "/portafolio" ||
+    asPath === "/contactos" ||
+    asPath === "/sobre-mi" ||
+    asPath === "/login" ) { 
     layoutSelect = "sub-page"
     titleSelect = (asPath.slice(1).charAt(0).toUpperCase() + asPath.slice(1).slice(1)).replace("-", " ")
   } else {
@@ -30,25 +31,24 @@ const Layout = ({children}) => {
           {titleSelect} | Musagy
         </title>
       </Head>
-
-      <div className="dark:bg-coolGray-800 transition-colors">
-        <div className={`${layoutClassDefault} ${layoutSelect}`}>
-          {
-            layoutSelect === "error"
-            ?
-            <main className="py-3 mx-auto max-w-4xl items">
-              <div>
-              </div>
-              {children}
-            </main>
-            :
-            <>
-              <Nav/>
-              {children}
-            </>
-          }
+        <div className="dark:bg-coolGray-800 transition-colors">
+          <div className={`${layoutClassDefault} ${layoutSelect}`}>
+            {
+              layoutSelect === "error"
+              ?
+              <main className="py-3 mx-auto max-w-4xl items">
+                <div>
+                </div>
+                {children}
+              </main>
+              :
+              <>
+                <Nav/>
+                {children}
+              </>
+            }
+          </div>
         </div>
-      </div>
     </>
   )
 }

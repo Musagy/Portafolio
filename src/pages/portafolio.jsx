@@ -5,15 +5,49 @@ import {
 import { FaAngleDoubleRight } from 'react-icons/fa'
 import Layout from '../components/layout'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import PostsList from '../components/postsList'
+import PostsLoading from '../components/postsLoading'
 import Image from 'next/image'
-
 import lostImage from 'public/lost-image.png'
+
+import fbApp from '../database/firebase'
+import {
+  getFirestore,
+  collection,
+  query,
+  orderBy,
+  onSnapshot
+} from 'firebase/firestore'
 
 
 const Portafolio = () => {
-  const [orden, setOrden] = useState(false)
-  const changeOrden = () => setOrden(!orden)
+  const db = getFirestore(fbApp)
+  const [posts, setPosts] = useState([])
+  const [orden, setOrden] = useState("desc")
+  const changeOrden = () => {
+    if (orden === "desc"){
+      setOrden("asc")
+      console.log("esta ascendiente")
+    } else {
+      console.log("esta descendiente")
+      setOrden("desc")
+    }
+  }
+
+  useEffect(() => {
+    const cltnPosts = query(collection(db, 'posts'), orderBy("date", orden))
+    onSnapshot(cltnPosts, (snapshot) => {
+      const listPost = []
+      snapshot.forEach((doc) => {
+        listPost.push(doc.data())
+      })
+      setPosts(listPost)
+      console.log(posts)
+    })
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[orden])
 
   return (
     <Layout>
@@ -74,7 +108,7 @@ const Portafolio = () => {
             onClick={changeOrden}
           >
             {
-              orden
+              orden === "desc"
               ?
               <>Más reciente <AiFillCaretUp/></>
               :
@@ -83,53 +117,11 @@ const Portafolio = () => {
           </button>
         </div>
 
-
-        <div className="
-          grid gap-x-6 gap-y-9 items-start
-          md:grid-cols-3 sm:grid-cols-2 grid-cols-1 
-        ">
-          {
-            [1,2,3,4,5].map((path) =>{
-              return(
-                <div 
-                  key={path}
-                  className="relative
-                  rounded-3xl bg-blueGray-700 shadow-lg
-                  pb-3
-                ">
-                  <div className="
-                  relative overflow-hidden
-                  md:h-48 md:w-full bg-blueGray-900 rounded-3xl h-48
-                  ">
-                    <Image
-                        src={lostImage} 
-                        layout="fill"
-                        objectFit="cover"
-                        alt="article image"
-                    />
-                  </div>
-                  <div className="flex flex-col p-3 gap-1">
-                    <h1 className="font-semibold text-xl text-teal-500">
-                      Hola ¿Como estas?
-                    </h1>
-                    <p className="font-light">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi facilis reiciendis, maxime at ea eius! Illo eveniet aut 
-                    </p>
-                  </div>
-                  <button className="
-                    absolute flex items-center gap-1
-                    text-lg font-bold
-                    bg-teal-500 shadow-lg hover:bg-teal-400
-                    px-3 py-2 rounded-xl
-                    right-5 -bottom-5 hover:translate-y-1 transition
-                  ">
-                    Ver más <FaAngleDoubleRight/>
-                  </button>
-                </div>
-              )
-            })
-          }
-        </div>
+        { posts.length !== 0 ?
+          <PostsList json={posts}/>
+          :
+          <PostsLoading/>
+        }
       </main>
     </Layout>
   )
