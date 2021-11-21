@@ -33,7 +33,8 @@ module.exports = {
       teal: colors.teal,
       blueGray: colors.blueGray,
       coolGray: colors.coolGray,
-      white: colors.white
+      white: colors.white,
+      red: colors.red
     },
     extend: {
       transitionProperty: {

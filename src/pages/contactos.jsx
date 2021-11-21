@@ -1,7 +1,7 @@
 import { FaAngleDoubleRight } from 'react-icons/fa'
 import Layout from '../components/layout'
 import Input from '../components/input'
-
+import { useRef } from 'react'
 import fbApp from '../database/firebase'
 import {
   collection,
@@ -12,6 +12,7 @@ import {
 
 const Contactos = () => {
   const db = getFirestore(fbApp)
+  const formulario = useRef()
 
   const submitHandler = async (e) => {
     e.preventDefault()
@@ -26,10 +27,7 @@ const Contactos = () => {
       message: mensaje,
       date: serverTimestamp()
     })
-    e.target.Nombre.value = ""
-    e.target.Email.value = ""
-    e.target.Teléfono.value = ""
-    e.target.Mensaje.value = ""
+    formulario.current.reset()
     console.log("se ha enviado correctamente el mensaje")
   }
 
@@ -39,7 +37,9 @@ const Contactos = () => {
         <div className="text-blueGray-700 dark:text-white mb-10">
 
           <h1 className="text-teal-500 dark:text-white text-4xl font-bold text-center">Mensaje directo</h1>
-          <form onSubmit={submitHandler} method="post"
+          <form onSubmit={submitHandler} 
+            method="post"
+            ref={formulario}
             className="
             flex flex-col drop-shadow-2xl
             w-96 gap-4 p-6 rounded-3xl

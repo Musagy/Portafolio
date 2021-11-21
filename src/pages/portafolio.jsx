@@ -40,7 +40,7 @@ const Portafolio = () => {
     onSnapshot(cltnPosts, (snapshot) => {
       const listPost = []
       snapshot.forEach((doc) => {
-        listPost.push(doc.data())
+        listPost.push({id:doc.id, ...doc.data()})
       })
       setPosts(listPost)
       console.log(posts)

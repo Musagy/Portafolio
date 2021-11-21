@@ -242,8 +242,12 @@ a {
   background-repeat: no-repeat;
 } */
 
-/* .message-container ::-webkit-scrollbar-track{
-  @apply dark:bg-coolGray-900 bg-white
+.message-container ::-webkit-scrollbar-track{
+  @apply dark:bg-blueGray-900 bg-white
 }
 .message-container ::-webkit-scrollbar-thumb{
-  @apply  dark:border-coolGray-900 border-white border-solid} */
+  @apply  dark:border-blueGray-900 border-white border-solid}
+.w-69{
+  max-width: 690px;
+  width: 100%;
+}

@@ -25,7 +25,7 @@ const Habilidades = () => {
     onSnapshot(cltnSD, (snapshot) => {
       const listSD = []
       snapshot.forEach((doc) => {
-        listSD.push(doc.data())
+        listSD.push({id:doc.id, ...doc.data()})
       })
       setSkillsDesign(listSD)
     })
@@ -34,7 +34,7 @@ const Habilidades = () => {
     onSnapshot(cltnSFE, (snapshot) => {
       const listSFE = []
       snapshot.forEach((doc) => {
-        listSFE.push(doc.data())
+        listSFE.push({id:doc.id, ...doc.data()})
       })
       setSkillsFrondEnd(listSFE)
     })

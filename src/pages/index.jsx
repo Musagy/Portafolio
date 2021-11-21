@@ -9,19 +9,23 @@ import {
   SiAdobephotoshop
 } from 'react-icons/si'
 import { MdAddCircle } from 'react-icons/md'
+
 import { useState, useEffect } from 'react'
-import Layout from '../components/layout'
 import Link from 'next/link'
-import { useAuth } from '../context/authContext'
 import Image from 'next/image'
+import Layout from '../components/layout'
+import CreateBtn from '../components/createBtn'
 import MessageList from '../components/messageList'
+import { useAuth } from '../context/authContext'
 import fbApp from '../database/firebase'
 import {
   getFirestore,
   collection,
   query,
   orderBy,
-  onSnapshot
+  onSnapshot,
+  doc,
+  deleteDoc
 } from 'firebase/firestore'
 import { getAuth, signOut } from 'firebase/auth'
 const auth = getAuth(fbApp)
@@ -30,18 +34,25 @@ const auth = getAuth(fbApp)
 const Home = () => {
   const { user } = useAuth()
   
-  const [mesagge, setMesagge] = useState([])
+  const [message, setMessage] = useState([])
+  const db = getFirestore(fbApp)
+
+  const deleteMail = (id) => {
+    // const db = getFirestore(fbApp)
+    deleteDoc(doc(db, "mails", id))
+  }
+
   useEffect(() => {
     if(user){
-      const db = getFirestore(fbApp)
       const coll = collection(db, 'mails')
-      const cltnMessage = query(coll)
+      const cltnMessage = query(coll, orderBy("date", "desc"))
       onSnapshot(cltnMessage, (snapshot) => {
         const listMessage = []
         snapshot.forEach((doc) => {
-          listMessage.push(doc.data())
+          listMessage.push({ id:doc.id, ...doc.data() })
         })
-        setMesagge(listMessage)
+        setMessage(listMessage)
+        console.log(message)
       })
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -62,31 +73,12 @@ const Home = () => {
               Bienvenido al god mode
             </h1>
             <div className="flex gap-8 justify-center">
-              <MessageList json={mesagge}/>
-              <div className="flex flex-col w-96 justify-center items-center gap-6 text-xl">
-                <div>
-                  <button className="
-                    flex items-center gap-1
-                     text-white font-bold
-                    bg-teal-500 shadow-lg hover:bg-teal-400
-                    px-3 py-2 rounded-xl
-                    right-5 -bottom-5 hover:translate-y-1 transition
-                  ">
-                      <MdAddCircle/>Crear articulo
-                  </button>
-                </div>
-                <div>
 
-                  <button className="
-                    flex items-center gap-1
-                     text-white font-bold
-                    bg-teal-500 shadow-lg hover:bg-teal-400
-                    px-3 py-2 rounded-xl
-                    right-5 -bottom-5 hover:translate-y-1 transition
-                  ">
-                      <MdAddCircle/>Crear skill
-                  </button>
-                </div>
+              <MessageList json={message} deleteFuntion={deleteMail}/>
+
+              <div className="flex flex-col w-96 justify-center items-center gap-6 text-xl">
+                <CreateBtn name="Crear articulo" coll="posts" />
+                <CreateBtn name="Crear skill" coll="skills" />
               </div>
             </div>
           </div>
@@ -113,7 +105,7 @@ const Home = () => {
               sm:text-6xl  
               text-5xl
               ">
-                  <>¡Hola!</>
+                ¡Hola!
               </h1>
               <p className="
               text-blueGray-700 text-2xl font-light
