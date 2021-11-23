@@ -2,14 +2,12 @@ import {
   AiFillCaretUp, 
   AiFillCaretDown, 
 } from 'react-icons/ai'
-import { FaAngleDoubleRight } from 'react-icons/fa'
 import Layout from '../components/layout'
-import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import PostsList from '../components/postsList'
 import PostsLoading from '../components/postsLoading'
 import Image from 'next/image'
-import lostImage from 'public/lost-image.png'
+import banner from '../public/portafolio-banner.svg'
 
 import fbApp from '../database/firebase'
 import {
@@ -67,7 +65,7 @@ const Portafolio = () => {
             bg-gradient-to-b from-teal-500
           ">
             <Image
-              src={lostImage} 
+              src={banner} 
               alt="banner"
               layout="fill"
               objectFit="cover"

@@ -1,7 +1,4 @@
-import Image from 'next/image'
-
 import { FaAngleDoubleRight } from 'react-icons/fa'
-import lostImage from 'public/lost-image.png'
 
 const PostsLoading = () => {
   return (

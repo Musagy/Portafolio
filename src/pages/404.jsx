@@ -1,25 +1,34 @@
 import Layout from '../components/layout'
+import Link from 'next/link'
 const Page404 = () => {
   return (
     <Layout>
-      <div className=" dark:bg-coolGray-800 h-full">
-        <div className="flex gap-5 m-11 mx-auto w-full justify-center">
-        <div className="w-20 h-20 bg-coolGray-800 dark:bg-white rounded-full circle1"/>
-        <div className="w-20 h-20 bg-teal-500 rounded-full circle2"/>
-        </div>
-        <h1 className="text-white text-4xl font-bold text-center">
-        <span className="letter letter1">C</span>
-        <span className="letter letter2">a</span>
-        <span className="letter letter3">r</span>
-        <span className="letter letter4">g</span>
-        <span className="letter letter5">a</span>
-        <span className="letter letter6">n</span>
-        <span className="letter letter7">d</span>
-        <span className="letter letter8">o</span>
-        <span className="letter letter9">.</span>
-        <span className="letter letter10">.</span>
-        <span className="letter letter11">.</span>
+      <div className="flex flex-col items-center gap-3 md:mb-12">
+        <h1 className="
+          text-teal-500 font-bold md:text-7xl text-center
+          sm:text-6xl  
+          text-5xl
+        ">
+          ¡Error 404!
         </h1>
+        <p className="
+          text-blueGray-700 dark:text-white font-normal md:text-4xl text-center
+          sm:text-3xl  
+          text-2xl
+        ">
+          Amigo, esta direccion url no existe.
+        </p>
+        <button className="
+        px-4 py-3 rounded-xl text-2xl mx-auto font-semibold bg-blueGray-700
+        mt-3
+        transition-all
+
+        hover:bg-teal-500 dark:hover:bg-teal-500 hover:scale-125
+        ">
+          <Link href="/">
+            Ir a inicio
+          </Link>
+        </button>
       </div>
     </Layout>
   )

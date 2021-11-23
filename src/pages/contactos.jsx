@@ -33,8 +33,8 @@ const Contactos = () => {
 
   return (
     <Layout>
-      <div className="flex m-auto gap-11 items-center">
-        <div className="text-blueGray-700 dark:text-white mb-10">
+      <div className="flex md:m-auto gap-11 items-center flex-col md:flex-row my-10 w-full md:w-auto p-3">
+        <div className="text-blueGray-700 dark:text-white md:mb-10 w-full md:w-auto ">
 
           <h1 className="text-teal-500 dark:text-white text-4xl font-bold text-center">Mensaje directo</h1>
           <form onSubmit={submitHandler} 
@@ -42,7 +42,7 @@ const Contactos = () => {
             ref={formulario}
             className="
             flex flex-col drop-shadow-2xl
-            w-96 gap-4 p-6 rounded-3xl
+            md:w-96 w-full gap-4 p-6 rounded-3xl
             bg-blueGray-300 dark:bg-blueGray-900 text-blueGray-700 dark:text-white font-semibold"
           >
             <Input type="text" title="Nombre" />

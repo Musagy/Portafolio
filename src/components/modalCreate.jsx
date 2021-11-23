@@ -1,5 +1,4 @@
-import { FaTrashAlt } from 'react-icons/fa'
-import { useEffect, useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import fbApp from '../database/firebase'
 import {
   collection,

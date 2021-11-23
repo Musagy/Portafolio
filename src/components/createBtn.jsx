@@ -1,16 +1,6 @@
 import { useState } from 'react'
 import { MdAddCircle } from 'react-icons/md'
-import { FaAngleDoubleRight } from 'react-icons/fa'
-import Layout from '../components/layout'
-import Input from '../components/input'
 import ModalCreate from './modalCreate'
-import fbApp from '../database/firebase'
-import {
-  collection,
-  addDoc,
-  getFirestore,
-  serverTimestamp,
-} from "firebase/firestore"; 
 
 const CreateBtn = ({ name, coll }) => {
   const [modal, setModal] = useState(false)

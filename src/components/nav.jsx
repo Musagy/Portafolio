@@ -124,7 +124,7 @@ const Nav = () => {
         <Link href="/contactos">
           <a className={`${itemRpsv} ${navDskt} ${itContactos}`}>Contactos</a>
         </Link>
-        <button className="
+        <div className="
           relative
         bg-coolGray-800
           h-9 w-14 rounded-full
@@ -154,7 +154,7 @@ const Nav = () => {
               onChange={e => toggleTheme(e)}
             />
           </div>
-        </button>
+        </div>
       </div>
     </nav>
   )

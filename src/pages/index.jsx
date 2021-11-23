@@ -8,7 +8,7 @@ import {
   SiAdobeillustrator,
   SiAdobephotoshop
 } from 'react-icons/si'
-import { MdAddCircle } from 'react-icons/md'
+import yo from '../public/yo.png'
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -94,9 +94,14 @@ const Home = () => {
           </button>
         </> : <>
           <main className="flex flex-col sm:flex-row  justify-self-center md:gap-20 items-center h-full gap-6 sm:gap-14 justify-center">
-            <div className="md:h-72 md:w-72 bg-blueGray-900 rounded-full h-48 w-48 sm:h-60 sm:w-60">
+            <div className="md:h-72 md:w-72 dark:bg-blueGray-900 bg-blueGray-300 rounded-full h-48 w-48 sm:h-60 sm:w-60 overflow-hidden">
+              <Image 
+                src={yo}
+                alt="yo"
+                objectFit="cover"
+              />
             </div>
-            <div className="md:w-96 text-center flex flex-col gap-7
+            <div className="md:w-96 text-center flex flex-col md:gap-7
               sm:w-64 w-64
             ">
               <h1 className="
@@ -108,7 +113,7 @@ const Home = () => {
                 ¡Hola!
               </h1>
               <p className="
-              text-blueGray-700 text-2xl font-light
+              text-blueGray-700 md:text-2xl text-xl font-light
     
               dark:text-white
               ">
@@ -116,7 +121,7 @@ const Home = () => {
                 Y este es mi portafolio.
               </p>
               <button className="
-              px-3 py-2 rounded-xl text-lg mx-auto font-semibold bg-blueGray-700
+              px-3 py-2 rounded-xl text-lg mx-auto font-semibold bg-blueGray-700 mt-7 md:m-auto
     
               transition-all
     

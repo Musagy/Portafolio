@@ -36,9 +36,7 @@ const Layout = ({children}) => {
             {
               layoutSelect === "error"
               ?
-              <main className="py-3 mx-auto max-w-4xl items">
-                <div>
-                </div>
+              <main className="flex w-full justify-center items-center">
                 {children}
               </main>
               :

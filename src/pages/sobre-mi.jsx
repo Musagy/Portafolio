@@ -4,7 +4,7 @@ import SkillsList from '../components/skillsList'
 import Loading from '../components/loading'
 
 import Layout from '../components/layout'
-import lostImage from 'public/lost-image.png'
+import yo from '../public/yo.png'
 
 import fbApp from '../database/firebase'
 import {
@@ -47,7 +47,7 @@ const Habilidades = () => {
         md:h-80 sm:h-80 h-96
       ">
         <div className="absolute
-        bg-coolGray-300 dark:bg-blueGray-700
+        bg-coolGray-200 dark:bg-blueGray-700
           w-full
           md:h-80 sm:h-80 h-96
           left-0 top-20
@@ -62,18 +62,20 @@ const Habilidades = () => {
           md:h-56 h-40
           w-40 md:w-auto 
           ">
+            <div className="rounded-full dark:bg-blueGray-900 bg-blueGray-300">
             <Image
-              src={lostImage}
+              src={yo}
               width={224}
               height={224}
               objectFit="cover"
               alt="fotografia"
             />
+            </div>
           </div>
           <div className="md:w-80 md:mr-28 z-10">
-            <p className="z-10 font-light">
+            <p className="z-10 font-normal text-blueGray-700 dark:text-white">
               Hola, me llamo Diego Eduardo Musagy Casas. <br />
-              Soy una persona a la que le gusta aprender cosas nuevas y tener habilidad para ello. Aparte de eso soy alguien con pasión por el diseño minimalista.
+              Soy una persona a la que le gusta aprender cosas nuevas y tengo habilidad para ello. Aparte de eso soy alguien con pasión por el diseño minimalista.
             </p>
           </div>
           <div className="relative">

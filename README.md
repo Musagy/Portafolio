@@ -61,3 +61,7 @@ Finalmente, este sera el commit que se considerara como la version 1.0 del Websi
 Este commit consistio en la mejora del buzon de mensajes con la libreria moment js y la creacion de modales para los creadores de posts y skills.
 Aparte de crear los key de los maps hechos en este sitio.
 lo unico que falta es crear algunos buenos posts y completar la seccion de skill e insertar la multimedia general del sitio web
+
+# 12vo commit - Arreglo de algunas cosas y responsive de contacto
+Simplemente esta ya es la version 1.1 de mi pagina, agrege una imagen de mi y una portada para mi portafolio.
+Y despues de casi un mes. Es hora de hacer el build y el deploy =)

@@ -1,7 +1,4 @@
-import Image from 'next/image'
-
-import { FaAngleDoubleRight, FaTrashAlt } from 'react-icons/fa'
-import lostImage from 'public/lost-image.png'
+import {  FaTrashAlt } from 'react-icons/fa'
 import { HiOutlineMailOpen } from 'react-icons/hi'
 import moment from 'moment'
 import 'moment/locale/es'
